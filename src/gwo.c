@@ -72,8 +72,6 @@ double* optimize(Fun* function, enum Opt optimum, int wolfs, int iterations)
 		}
 	}
 
-	
-
 	return alpha_position;
 }
 

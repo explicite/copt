@@ -9,7 +9,7 @@ lib:
 	$(CC) $(CFLAGS) \
 	$(BUILD)/fun.o \
 	$(BUILD)/gwo.o \
-	$(BUILD)/test.o -o test.out
+	$(BUILD)/test.o -lm -o test.out
 
 test:
 	$(CC) -c $(CFLAGS) $(SRC)/test.c -o $(BUILD)/test.o
