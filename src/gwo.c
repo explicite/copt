@@ -36,6 +36,7 @@ double* optimize(Fun* function, enum Opt optimum, int wolfs, int iterations)
 
 	for(uint iteration = 0; iteration < iterations; iteration++){
 		for(uint position = 0; position < wolfs; position++){
+			//TODO Return back the search agents that go beyond the boundaries of the search space
 			double fitness = function->val(positions[position]);
 
 			if(fitness > alpha_score) {
