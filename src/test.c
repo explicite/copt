@@ -1,8 +1,9 @@
 #include "gwo.h"
 #include "fun.h"
-#include <math.h>
+
 #include <stdlib.h>
 #include <stdio.h>
+#include <math.h>
 
 double mc_cornic(double*);
 
@@ -27,7 +28,7 @@ int main()
 
 	double min_val = mc_cornic(min_pos);
 
-	double computed_min_val = mc_cornic(min(&fun, 200, 450));
+	double computed_min_val = mc_cornic(min(&fun, 10000, 1000));
 
 	printf("%f, %f\n", min_val, computed_min_val);
 	return 0;
@@ -35,6 +36,6 @@ int main()
 
 double mc_cornic(double* xs) {
 	double x = xs[0];
-	double y = xs[0];
-	return sin(x + y) + ((x - y) * (x - y)) - (1.5 * x) + (2.5 * y) + 1.0;
+	double y = xs[1];
+	return (sin(x + y) + ((x - y) * (x - y)) - (1.5 * x) + (2.5 * y) + 1.0);
 }

@@ -9,7 +9,7 @@ lib:
 	$(CC) $(CFLAGS) \
 	$(BUILD)/fun.o \
 	$(BUILD)/gwo.o \
-	$(BUILD)/test.o -lm -o test.out
+	$(BUILD)/test.o -lm -openmp -o test.out
 
 test:
 	$(CC) -c $(CFLAGS) $(SRC)/test.c -o $(BUILD)/test.o
@@ -22,6 +22,7 @@ fun:
 
 clean:
 	rm -rf $(BUILD)
+	rm ./test.out
 
 mk:
 	mkdir -p $(BUILD)

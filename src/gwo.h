@@ -2,5 +2,5 @@
 #include "fun.h"
 #include "opt.h"
 
-double* min(Fun*, int, int);
-double* max(Fun*, int, int);
+double* min(Fun*, unsigned int, unsigned int);
+double* max(Fun*, unsigned int, unsigned int);

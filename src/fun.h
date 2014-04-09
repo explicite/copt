@@ -3,7 +3,7 @@
 
 typedef struct
 {
-	size_t size;
+	unsigned int size;
 	double* bounds;
 	double (*val)(double*);
 } Fun;
