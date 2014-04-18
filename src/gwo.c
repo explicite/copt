@@ -4,7 +4,6 @@
 #include <string.h>
 #include <time.h>
 #include <math.h>
-#include <time.h>
 #include <omp.h>
 
 // utils
@@ -98,7 +97,7 @@ double* max(Fun* funciton, unsigned int wolfs, unsigned int iterations)
 }
 
 
-//utils impl
+// utils impl
 double next_rand(double min, double max)
 {
 	return (min + (rand() / (RAND_MAX / (max - min))));
